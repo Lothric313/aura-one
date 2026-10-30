@@ -2,7 +2,7 @@
 
 Сайт: https://lothric313.github.io/aura-one/
 
-GitHub Pages публикуется автоматически после push в `main`. Сборка для Pages:
+GitHub Pages публикует готовый сайт из ветки `gh-pages`. Ветка `main` хранит исходники; GitHub Actions проверяет их и собирает сайт. Для обновления публичного сайта нужно отправить содержимое новой папки `dist` в `gh-pages`. Сборка для Pages:
 
 ```sh
 npm ci
@@ -90,4 +90,5 @@ window.aura и data-атрибуты body содержат диагностич�
 Oculus Quest 3 — AVILOV: https://sketchfab.com/3d-models/oculus-quest-3-f4b794fc21784cd2a78392af05e0b597 .
 Лицензия CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ .
 Изменены разделение геометрии, нормализация, оптика, материал ремешка и анимация. Авторство также указано в окне «О концепте» и в метаданных GLB. Параметры Aura One являются демонстрационными.
+
 
