@@ -1,0 +1,32 @@
+/* Glass wordmark only; the original video remains the visible background. */
+.landscape-title{
+  top:0;left:0;right:0;bottom:0;height:100%;display:block;isolation:isolate;
+  transform:none;filter:none;animation:none;transition:none;pointer-events:none;
+}
+.landscape-title .glass-title-canvas{
+  position:absolute;inset:0;display:block;width:100%;height:100%;
+  filter:drop-shadow(0 1px 0 rgba(20,37,48,.65)) drop-shadow(0 -.6px 0 rgba(255,255,255,.9)) drop-shadow(0 3px 3px rgba(24,45,59,.12));
+}
+/* Accessible text and a neutral glass fallback while WebGL loads/unavailable. */
+.landscape-title .display{
+  position:absolute;inset:auto;left:50%;bottom:calc(100% - var(--horizon-y));
+  display:block;width:var(--title-width);height:var(--title-height);
+  margin:0;padding:0;white-space:nowrap;text-align:center;
+  font:900 var(--title-font-size)/.755 Inter,sans-serif;letter-spacing:-.065em;
+  color:rgba(240,249,255,.15);-webkit-text-fill-color:transparent;
+  background:linear-gradient(165deg,rgba(255,255,255,.95),rgba(255,255,255,.2) 35%,rgba(221,240,251,.3) 60%,rgba(255,255,255,.9));
+  background-clip:text;-webkit-background-clip:text;-webkit-text-stroke:.65px rgba(29,48,63,.6);
+  text-shadow:0 1px 0 rgba(255,255,255,.8),1px 2px 1px rgba(29,48,63,.12);
+  transform:translateX(-50%)!important;filter:none;animation:none;transition:none;
+}
+.landscape-title.glass-title-ready .display{
+  width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;
+}
+/* Preserve the existing navigation appearance during immersion. */
+body.in-world .header,body.in-world .header.scrolled{
+  color:#273d46;background:transparent;border-color:transparent;
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+.in-world .header .nav-link{color:#3f5862}
+.in-world .menu-toggle{color:#273d46}

@@ -1,0 +1,23 @@
+{
+  "name": "aura-one",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4188",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4188",
+    "check": "node scripts/check.mjs",
+    "check:mobile": "node scripts/check-mobile.mjs",
+    "check:desktop": "node scripts/check-desktop.mjs",
+    "model:mobile": "node scripts/prepare-mobile-model.mjs",
+    "model:title": "node scripts/prepare-glass-title.mjs"
+  },
+  "dependencies": {
+    "gsap": "3.13.0",
+    "lenis": "1.3.11",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "vite": "7.3.7"
+  }
+}

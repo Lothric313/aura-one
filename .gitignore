@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.openai/
+.env
+.env.*
+.DS_Store
+*.tar.gz
+*.zip
+font-source.css
+sora-source.css
+.vite/
+artifacts/
